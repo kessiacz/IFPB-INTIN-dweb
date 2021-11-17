@@ -1,0 +1,54 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReIFeição</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= "{% static "css/style.css" %}"/>
+    <link href="{% static 'img/icon/if.ico' %}" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+        <img src="{% static 'img/logo.jpg' %}" alt="ReIFeição" width="50%"/>
+        <form method="post" action="{% url 'users-signin' %}" class="login" style="">
+            {% csrf_token %}
+                    {{ form.username|add_class:'form-control'|append_attr:'placeholder:Matricula'}}
+            <div class="form-row" style="margin-top: 2.2%;">
+                <div class="col-md-12 form-group">
+                    {{ form.password|add_class:'form-control'|append_attr:'placeholder:Senha'}}
+                    <div class="validate"></div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="error-message" style="text-align: center; margin-top: 2%;">
+                    {% if form.errors %}
+                        Matricula ou senha incorreta(s).
+                    {% endif %}
+
+                    {% if next %}
+                        {% if user.is_authenticated %}
+                            Your account doesn't have access to this page. To proceed, please login with an account that has access.
+                        {% else %}
+                            Please login to see this page.
+                        {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+            <div class="login" style="margin-top: 2%;" >
+                <input type="submit" value="Entrar">
+                <input type="hidden" name="next" value="{{ next }}">
+                <a href="/register/">Cadastrar-se</a>
+            </div>
+        </form>
+        </div>
+    </div>
+    <script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

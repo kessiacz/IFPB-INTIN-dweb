@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReIFeição</title>
+
+    <link rel="shortcut icon" href="../assets/img/icon/if.ico">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= "{% static "css/style.css" %}"/>
+    <link href="{% static 'img/icon/if.png' %}" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="box_cp">
+            <h2>Dados de Solicitação</h2>
+            <form id="form">
+                {% csrf_token %}
+                <div class="table_dados_req" id='table_dados'>
+                    <b><label>Professor(a):</b>
+                    <label  style="margin-left: -5px;">{{user.first_name}}</label>
+
+                    <b><label>Curso:</label></b>
+                    <label style="margin-left: -5px;">{{object.curso}}</label>
+
+                    <b><label>Turma:</label></b>
+                    <label style="margin-left: -5px;">{{object.turma}}</label>
+                    <br>
+                    <b><label>Data de Refeição:</label></b>
+                    <label style="margin-left: -5px;">{{object.data}}</label>
+
+                    <b><label>Tipo de Refeição:</label></b>
+                    <label style="margin-left: -5px;">{{object.tipo_de_refeicao}}</label>
+                </div>
+                <hr>
+            </form>
+            <form>
+                <div class="table_process2" id='table_hw'>
+                    <table width='100%' border='1' bordercolor='#000000'>
+                        <th>Alunos</th>
+                        <th>Matricula</th>
+                        {% for turma in object.alunos.all %}
+                        <tr>
+                            <td>{{turma.nome}}</td>
+                            <td>{{turma.matricula}}</td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </form>
+            <div class="btn_exit">
+                <input style="margin-top: -69px;" onclick="printWindow()" type="submit" name="" value="Imprimir"></label>
+                <input style="margin-top: -69px;" onclick="history.go(-1); return false;" type="submit" name="" value="Voltar"></label>
+            </div>
+        </div>
+        <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

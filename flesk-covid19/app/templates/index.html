@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cajazeiras | Dados Covid.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page">
+    
+    <div id="header">
+        <div>
+            <img class="logo" src="https://cajazeiras.pb.gov.br/imagens/logo.png">
+        </div>
+
+        <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
+        <h4 class="cab">Sistema atualizado diariamente</h4>
+
+    </div>  
+
+    <div id="nav">
+        <ul>
+            <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
+            <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
+            <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
+            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
+        </ul>
+    </div>
+    
+    <div id="content">
+        <div>
+            <h3>BOLETIM</h3>
+        </div>
+        <div id="article" class="article1">
+            <p>CONFIRMADOS</p>
+            <p>{{boletim.1.count}}</p>
+        </div>
+        <div id="article" class="article2">
+            <p>EM ANÁLISE</p>
+            <p>{{boletim.0.count}}</p>
+        </div>
+        <div id="article" class="article3">
+            <p>DESCARTADOS</p>
+            <p>{{boletim.2.count}}</p>
+        </div>
+        <div id="article" class="article4">
+            <p>ÓBITOS</p>
+            <p>{{boletim.3.count}}</p>
+        </div>
+        <div id="article" class="article5">
+            <p>INTERNADOS</p>
+            <p>{{boletim.4.count}}</p>
+        </div>
+        <div id="article" class="article6">
+            <p>RECUPERADOS</p>
+            <p>{{boletim.5.count}}</p>
+        </div>
+    </div>
+
+    <div id="footer">
+        <p class="cop">&copy; 2020</p>
+    </div>
+
+</body>
+</html>

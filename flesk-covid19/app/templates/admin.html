@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cajazeiras | Dados Covid.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page">
+        
+    <div id="header">
+        <div>
+            <img class="logo" src="https://cajazeiras.pb.gov.br/imagens/logo.png">
+        </div>
+
+        <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
+    </div>  
+
+    <div id="nav">
+        <ul>
+            <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
+            <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
+            <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
+            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
+        </ul>
+    </div>
+    
+    <div>
+        <form class= "box" style="background-color: #191919;" action="" method="post">
+            {{ form.csrf_token }}
+            <div><h3>ADMIN</h3></div>
+            <div>
+                <style>
+                    .box input[type=password], .box input[type=text]{
+                        border:0;
+                        background: #191919;
+                        display: inline-block;
+                        margin-top: 20px;
+                        text-align: center;
+                        border: 2px solid #AD111E;
+                        padding: 14px 10px;
+                        width: 200px;
+                        outline: none;
+                        color: #C4C4C4;;
+                        border-radius: 10px;
+                        transition: 0.25s;
+                    }
+
+                    .box input[type=password]:focus, .box input[type=text]:focus{
+                        width: 250px;
+                        border-color: #fcfcfc;
+                    }
+                    .box input[type=submit]{
+                        border:0;
+                        background: #191919;
+                        display: inline-block;
+                        margin-top: 20px;
+                        text-align: center;
+                        border: 2px solid #AD111E;
+                        padding: 14px 10px;
+                        width: 125px;
+                        outline: none;
+                        color: #C4C4C4;;
+                        border-radius: 10px;
+                        transition: 0.25s;
+                    }
+                    .box input[type=submit]:hover{
+                        border-color: #fcfcfc;
+                    }
+                </style>
+                {{ form.user(class="form-control",placeholder="user", style="background-color: #191919")}}
+                {{ form.senha(class="form-control",placeholder="password", style="background-color: #191919")}}
+
+                <br>
+                <input type="submit" name="" value="ENTRAR">
+            </div>
+        </form>
+    </div>
+    </div>
+    {% if error %}
+    <div class="notification is-danger">
+      {{ error }}
+    </div>
+    {% endif %}
+    <div id="footer">
+        <p class="cop" style="color: #191919;">&copy; 2020</p>
+    </div>
+    

@@ -1,0 +1,384 @@
+:root {
+    font-size: 60%; /* controle das medidas rem */
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    font: 500 1.6rem Poppins;
+    background: #FFFDFD;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center
+}
+h2{
+    vertical-align: middle;
+    text-align: center;
+}
+.box h2, .box_cp h2{
+    background-color: #000000;
+    color: #F2F2F2;
+    border-radius: 5px;
+    padding:5px;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-family: Poppins;
+    justify-content: center;
+}
+.box {
+    width: 500px;
+    height: 380px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px rgba(0.50, 0.50, 0.50, 0.35);
+    border-radius: 10px;
+    overflow: auto;
+}
+body {
+    margin: 0px;
+    font: 500 1.6rem Poppins;
+}
+.form-control{
+    text-align: center;
+}
+img {
+    margin-top: 25px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 20px;
+}
+td a{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+}
+td a:hover{
+    text-decoration: underline;
+    text-decoration-color: #01cc65;
+}
+.login a{
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 40%;
+}
+.login a:hover {
+    color: #01cc65;
+}
+.table_process_req input[type=submit]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 180px;
+    height: 30px;
+    margin-bottom: 8px;
+    border: 1px solid #000000;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.25;
+    justify-content: center;
+}
+.table_process_req input[type=submit]:hover{
+    border-color: #01cc65;
+}
+.table_dados_req input[type=text], .table_process_req input[type=text], .table_dados_req input[type=date]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 180px;
+    height: 20px;
+    margin-bottom: 8px;
+    border: 1px solid #000000;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.25;
+}
+.table_dados_req input[type=text]:hover, .table_dados_req input[type=date]:hover, .table_process_req input[type=text]:hover{
+    border-color: #01cc65;
+}
+select{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 250px;
+    height: 30px;
+    margin-left: 24%;
+    border: 1px solid #000000;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.25;
+}
+select:hover{
+    border-color: #01cc65;
+}
+.signup input[type=password], .signup input[type=text]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 250px;
+    height: 30px;
+    margin-left: 24%;
+    border: 1px solid #000000;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.25;
+}
+.signup input[type=password]:hover, .signup input[type=text]:hover{
+    border-color: #01cc65;
+
+}
+.signup input[type=submit]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 230px;
+    height: 30px;
+    margin-left: 26.5%;
+    border: 1px solid #6F6C6C;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.25;
+}
+.signup input[type=submit]:hover{
+    border: 1px solid #6F6C6C;
+    background-color: #01cc65;
+}
+
+.login input[type=password], .login input[type=text], .signin input[type=password], .signin input[type=text]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 250px;
+    height: 35px;
+    margin-left: 24%;
+    border: 1px solid #000000;
+    color: #000000;
+    outline: none;
+    border-radius: 10px;
+    transition: 0.25;
+}
+.login input[type=password]:hover, .login input[type=text]:hover, .signin input[type=password]:hover, .signin input[type=text]:hover{
+    border-color: #01cc65;
+
+}
+.box_cp input[type=button]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 160px;
+    height: 30px;
+    margin-left: 24%;
+    border: 1px solid #6F6C6C;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.25;
+    cursor: pointer;
+}
+.box_cp input[type=button]:hover{
+    border: 1px solid #6F6C6C;
+    background-color: #01cc65;
+}
+.login input[type=submit], .signin input[type=submit], .btn_exit input[type=submit]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 230px;
+    height: 35px;
+    margin-left: 26.5%;
+    border: 1px solid #6F6C6C;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.25;
+}
+.login input[type=submit]:hover, .signin input[type=submit]:hover, .btn_exit input[type=submit]:hover{
+    border: 1px solid #6F6C6C;
+    background-color: #01cc65;
+
+}
+.signin input[type=radio], td input[type=radio], input[type=radio]{
+    display: inline-block;
+    background-color: #01cc65;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+}
+.signin .op{
+    padding-left: 27%;
+}
+
+.signin input[type='radio']:after, td input[type=radio]:after, input[type=radio]:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    position: relative;
+    background-color: #F2F2F2;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #01cc65;
+}
+
+.signin input[type='radio']:checked:after, td input[type=radio]:checked:after, input[type=radio]:checked:after{
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    position: relative;
+    background-color:  #01cc65;
+    cursor: pointer;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 1px solid #141313b6;
+}
+.box_cp{
+    width: 900px;
+    height: 500px;
+    background: #F2F2F2;
+    box-shadow: 0px 4px 4px rgba(0.50, 0.50, 0.50, 0.35);
+    border-radius: 10px;
+}
+
+.box_cp .btn_exit{
+    display: flex;
+    flex-direction: row;
+    padding-right: 25px;
+    margin-left: 10%;
+    margin-right: 18%;
+}
+.btn_exit label{
+    display: flex;
+    flex-direction: row;
+    margin-left: 225px;
+    margin-top: -5px;
+}
+.btn_exit{
+    display: flex;
+    flex-direction: row;
+    padding-right: 25px;
+    margin-left: 35%;
+    margin-top: -5px;
+
+}
+.table_dados_req label, .table_dados_req b{
+    margin-left: 60px;
+    margin-right: 5px;
+    position: static;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.table_dados label{
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-right: 10px;
+    position: static;
+    justify-items: center;
+    align-items: center;
+}
+input[type=submit], input[type=radio]{
+    cursor: pointer;
+}
+.signin label {
+    display:none;
+}
+#id_radio_choices li{
+    list-style-type: none;
+}
+/*.signin input[type=text]{
+    margin-bottom: 10px;
+}*/
+#id_radio_choices, #id_radio_choices label{
+    display: flex;
+    flex-direction: row;
+}
+.table_dados_req input[type=submit]{
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 180px;
+    height: 30px;
+    margin-left: 26.5%;
+    border: 1px solid #6F6C6C;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.25;
+}
+.table_dados_req input[type=submit]:hover{
+    border: 1px solid #6F6C6C;
+    background-color: #01cc65;
+}
+.btn_exit input[type=submit]{
+    margin-left: 15%;
+}
+#table_hw{
+    width: 880px;
+    height: 308px;
+}
+.table_process{
+    width: 880px;
+    height: 332px;
+    margin-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+.table_process2 {
+    width: 880px;
+    height: 350px;
+    margin-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+.table_process3{
+    width: 880px;
+    height: 244px;
+    margin-bottom: 80px;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+}
+table{
+    table-layout: fixed;
+    text-align: center;
+}
+.table_process input[type=submit]:hover {
+    border: 1px solid #6F6C6C;
+    background-color: #01cc65;
+}
+.table_process input[type=submit] {
+    background: #F2F2F2;
+    font: 500 1.6rem Poppins;
+    width: 100px;
+    height: 30px;
+    margin-left: 10px;
+    border: 1px solid #6F6C6C;
+    color: #000000;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: 0.25;
+}
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-button {
+    width: 8px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background:#eee;
+    border: thin solid lightgray;
+    box-shadow: 0px 0px 3px #dfdfdf inset;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb {
+    background:#999;
+    border: thin solid gray;
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background:#7d7d7d;
+}
+table input[type=hidden]{
+    display: none;
+}

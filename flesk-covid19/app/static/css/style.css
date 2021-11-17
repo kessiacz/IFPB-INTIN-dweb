@@ -1,0 +1,227 @@
+:root {
+    font-size: 60%; /* controle das medidas rem */
+}
+
+#header{
+  color: #FCFCFC;
+  margin: 25px;
+  padding: 2px;
+  border-radius: 8px;
+  font-weight: 400px;
+  background-color: #AD111E;
+}
+.logo {
+  margin-top: 10px;
+  margin-bottom: -20px;
+  border-radius: 8px;
+  background-position: center;
+  background-repeat: no-repeat
+}
+body {
+  width: 90%;
+  min-width:400px;
+  max-width:960px;
+  margin: auto;
+  font: 500 1.6rem Poppins;
+  color: #FCFCFC;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background: #FCFCFC;
+}
+
+ul {
+  padding:0px;
+  margin:0px;
+  list-style:none;
+}
+
+ul li {
+  display: inline;
+  padding: 0.1em;
+}
+
+ul li a {
+  display: inline-block;
+  color: #FCFCFC;
+  background-color: #191919;
+  text-align: center;
+  height: 30px;
+  width: 120px;
+}
+
+#content {
+  overflow: auto;
+  height: 100%;
+  color: #FCFCFC;
+  margin: 20px;
+  padding: 20px;
+  display: inline-block;
+  border-radius: 8px;
+  background-color: #191919;
+}
+
+#nav {
+  padding: 10px;
+  margin: 10px;
+}
+#footer p {
+  color: black;
+}
+#content h3{
+    background-color: #AD111E;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px;
+    width: 300px;
+    color: #FCFCFC;
+    border-radius: 8px;
+}
+
+.box{
+  margin: 20px;
+  display: inline-block;
+  position: static;
+  width: 400px;
+  padding: 14px 10px;
+  background: #191919;
+  text-align: center;
+  border-radius: 15px;
+}
+.box h3{
+  background-color: #AD111E;
+  display: inline-block;
+  padding: 10px;
+  width: 300px;
+  color: #FCFCFC;
+  border-radius: 8px;
+}
+.box h4{
+  background-color: #AD111E;
+  display: inline-block;
+  padding: 10px;
+  width: 300px;
+  color: #FCFCFC;
+  border-radius: 8px;
+}
+
+.box input[type = "text"],.box input[type = "email"],.box input[type = "tel"]{
+  border:0;
+  background: none;
+  display: inline-block;
+  margin: 2PX;
+  text-align: center;
+  border: 2px solid #AD111E;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: #C4C4C4;;
+  border-radius: 10px;
+  transition: 0.25s;
+
+}
+.box input[type = "text"]:focus,.box input[type = "email"]:focus,.box input[type = "tel"]:focus{
+  width: 280px;
+  border-color: #fcfcfc;
+}
+.box input[type="submit"]{
+  border:0;
+  background: none;
+  display: inline-block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #AD111E;
+  padding: 14px 40px;
+  outline: none;
+  color: #C4C4C4;
+  border-radius: 10px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type="submit"]:hover, b:hover{
+  border: 2 solid #FCFCFC;
+}
+
+p {
+  color: #FCFCFC;
+  padding: 10px;
+  margin: 10px;
+}
+
+.disable_underlined {
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  color: #FCFCFC;
+  border-radius: 8px;
+}
+.disable_underlined:hover {
+  background-color: #AD111E;
+  box-shadow: 0 0 0 2px #191919;
+
+}
+.disable_underlinedRD {
+  text-decoration: none;
+  padding: 5px;
+  margin: 5px;
+  color: #FCFCFC;
+  border-radius: 8px;
+}
+.disable_underlinedRD:hover {
+  box-shadow: 0 0 0 2px #AD111E;
+}
+
+#article {
+  width: 200px;
+  margin: 10px;
+  line-height: 0.6;
+  color: #FCFCFC;
+  float: top;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  display: inline-block;
+  border-radius: 8px;
+}
+.article1 {
+  background-color: #D63741;
+}
+.article2 {
+  background-color: #E79419;
+}
+.article3 {
+  background-color: #45A65A;
+}
+.article4 {
+  background-color: #797676;
+}
+.article5 {
+  background-color: #C436CD;
+}
+.article6 {
+  background-color: #32AED4;
+}
+#insta-button{
+  display: inline-block;
+  border-radius: 8px;
+  color: white;
+  margin: 20px;
+  width: 25px;
+  height: 25px;
+  background-size:85% 85%;
+  background-image: url("https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-256.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#face-button{
+  display: inline-block;
+  border-radius: 8px;
+  color: white;
+  margin: 20px;
+  width: 25px;
+  height: 25px;
+  background-size: 88% 88%;
+  background-image: url("https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2-free/128/social-facebook-circle-256.png");
+  background-position: center;
+  background-repeat: no-repeat;
+}

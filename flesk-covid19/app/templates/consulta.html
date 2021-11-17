@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajazeiras | Dados Covid.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page">
+        
+    <div id="header">
+        <div>
+            <img class="logo" src="https://cajazeiras.pb.gov.br/imagens/logo.png">
+        </div>
+
+        <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
+    </div> 
+        
+    <div id="nav">
+        <ul>
+            <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
+            <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
+            <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
+            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
+        </ul>
+    </div>
+    <div>
+        
+        <form class="box" action="{{ url_for('cons.formPost') }}" method="post">
+          {{ form.csrf_token }}  
+            <h3>Marcação de exame</h3>
+            {{ form.cpf(class="form-control",placeholder="CPF")}}
+            {{ form.name(class="form-control",placeholder="Nome completo")}}
+            {{ form.gender(class="form-control",placeholder="Gênero")}}
+            {{ form.age(class="form-control",placeholder="Idade")}}
+            {{ form.email(class="form-control",placeholder="E-mail")}}
+            {{ form.tell(class="form-control",placeholder="Telefone")}}
+            {{ form.district(class="form-control",placeholder="Bairro")}}
+            {{ form.group_risk(class="form-control",placeholder="Grupo de Risco")}}
+            {{ form.symptoms(class="form-control",placeholder="Sintomas")}}
+            <br>
+            <style>
+                .box input[type=submit]{
+                        border:0;
+                        background: #191919;
+                        display: inline-block;
+                        margin-top: 20px;
+                        text-align: center;
+                        border: 2px solid #AD111E;
+                        padding: 14px 10px;
+                        width: 125px;
+                        outline: none;
+                        color: #C4C4C4;;
+                        border-radius: 10px;
+                        transition: 0.25s;
+                    }
+                    .box input[type=submit]:hover{
+                        border-color: #fcfcfc;
+                    }
+            </style>
+            <input type="submit" name="" value="ENVIAR"></b>
+        </form>
+    </div>
+        
+    <div id="footer">
+        <p class="cop">&copy; 2020</p>
+    </div>
+
+</body>
+</html>

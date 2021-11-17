@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Cajazeiras | Dados Covid.</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body id="page">
+        
+    <div id="header">
+        <div>
+            <img class="logo" src="https://cajazeiras.pb.gov.br/imagens/logo.png">
+        </div>
+
+        <h2 class="cab">BOLETIM DO CORONAVÍRUS (COVID-19)</h2>
+    </div>  
+
+    <div id="nav">
+        <ul>
+            <li><a href="{{url_for('main.homepage')}}" class="disable_underlined">BOLETIM</a></li>
+            <li><a href="{{url_for('cons.conspage')}}" class="disable_underlined">EXAME</a></li>
+            <li><a href="{{url_for('info.infopage')}}" class="disable_underlined">REDES SOCIAIS</a></li>
+            <li><a href="{{url_for('admin.adminpage')}}" class="disable_underlined">ADMIN</a></li></li>
+        </ul>
+    </div>
+    <div id="names" class="box" style="width: 960px">
+        <h3>SOLICITAÇÕES</h3>
+        {% for exame in exames %}
+        <div>
+            <h4>{{ exame.name }}</h4>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=0) }}">Em Análise</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=1) }}">Confirmado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=2) }}">Descartado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=3) }}">Óbito</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=4) }}">Internado</a>
+            <a class="disable_underlined" href="{{ url_for('cons.update', exame_id=exame.id, status=5) }}">Recuperado</a>
+        </div>
+        {% endfor %}
+        
+    </div>
+    <div id="footer">
+            <p class="cop" style="color: #191919;">&copy; 2020</p>
+    </div>

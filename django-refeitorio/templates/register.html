@@ -1,0 +1,87 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReIFeição</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= "{% static "css/style.css" %}"/>
+    <link href="{% static 'img/icon/if.png' %}" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="box" style="height: 395px;">
+            <h2>Cadastro</h2>
+            <div class="signup">
+                <form method="post" action="{% url 'users-signup' %}">
+                    {% csrf_token %}
+                    <div class="form-row" style="padding-bottom: 1%;">
+                        <div class="col-md-12 form-group">
+                            {{ form.first_name|add_class:'form-control'|append_attr:'placeholder:Nome'|append_attr:'data-rule:"minlen:4"' }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-bottom: 1%;">
+                        <div class="col-md-12 form-group">
+                            {{ form.last_name|add_class:'form-control'|append_attr:'placeholder:Sobrenome'|append_attr:'data-rule:"minlen:4"' }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-bottom: 1%;">
+                        <div class="col-md-12 form-group">
+                            {{ form.username|add_class:'form-control'|append_attr:'placeholder:Matricula'|append_attr:'data-rule:"minlen:4"' }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-bottom: 1%;">
+                        <div class="col-md-12 form-group">
+                            {{ form.password1|add_class:'form-control'|append_attr:'placeholder:Senha'|append_attr:'data-rule:"minlen:4"' }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-bottom: 1%;">
+                        <div class="col-md-12 form-group">
+                            {{ form.password2|add_class:'form-control'|append_attr:'placeholder:Repita senha'|append_attr:'data-rule:"minlen:4"' }}
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="form-row" style="padding-bottom: 1%; margin-left: 4.5px;">
+                        <div class="col-md-12 form-group">
+                            <select name="groups" class="form-control">
+                                {% for group in groups %}
+                                <option value="{{ group.pk }}">{{ group.name }}</option>
+                                {% endfor %}
+                            </select>
+                            <div class="validate"></div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="error-message">
+                            {% if form.errors %}
+                                Your username and password didn't match. Please try again.
+                            {% endif %}
+
+                            {% if next %}
+                                {% if user.is_authenticated %}
+                                    Your account doesn't have access to this page. To proceed, please login with an account that has access.
+                                {% else %}
+                                    Please login to see this page.
+                                {% endif %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <input type="submit" value="Cadastrar" style="margin-top: 5px;">
+                        <input type="hidden" name="next" value="{{ next }}">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReIFeição</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href= "{% static "css/style.css" %}"/>
+    <link href="{% static 'img/icon/if.png' %}" rel="icon">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="box_cp">
+            <h2>Dados Gerais</h2>
+            <div class="table_dados">
+                <b>
+                    <label>Função:</label>
+                </b>
+                <label>Professor(a)</label>
+                <b>
+                    <label>Matrícula:</label>
+                </b>
+                <label>{{user.username}}</label>
+                <br>
+            </div>
+            <hr>
+            <div class="table_process">
+                <table width='100%' border='1' bordercolor='#000000'>
+                    {% csrf_token %}
+                    <th>Assunto</th>
+                    <th>Situação</th>
+                    {% for resultados in object_list %}
+                    <tr>
+                        <td>{{resultados.data}} - {{resultados.turma}} - {{resultados.curso}}</td>
+                        <td>{{resultados.status}}</td>
+                    </tr>
+                    <tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="btn_exit">
+                <a style="margin-top: -69px; margin-left: 60.5px; padding-right: 15%;" href="/request"> <input style="width: 218.06px;" type="submit" name="" value="Solicitação"></a>
+                <a style="margin-top: -69px;" href= "{% url 'users-signout' %}"> <input style="width: 218.06px;" onclick="confirmExit()" type="submit" name="" value="Sair"></a>
+            </div>
+            <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
